@@ -29,8 +29,8 @@ bash deploy.sh
 Este comando te pedirá las siguientes variables: 
 
 ```bash
-DOMAIN_NAME | test
-DOMAIN | test.com
+DOMAIN_NAME | mars-rover-mission
+DOMAIN | mars-rover-mission
 INSECURE_PORT | 8081
 SECURE_PORT | 8082
 MYSQL_PORT | 33063
@@ -45,4 +45,11 @@ Por último en nuestro archivo hosts, añadiremos el registro del dominio que ha
 
 ```bash
 127.0.0.1      dev-mars-rover-mission.com
+```
+
+Una vez tengamos los contenedores funcionando desde dentro del contenedor, deberás instalar los vendors mediatne **composer install**. Una vez instalados ejecutaremos: 
+
+```bash
+php artisan migrate:fresh
+php artisan db:seed
 ```
