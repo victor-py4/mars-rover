@@ -37,7 +37,7 @@ MYSQL_PORT | 33063
 PROJECT_FOLDER | laravel/public
 ```
 
-Este creará el .env del entorno que se haya escogido, ademas en el caso de que sea el entorno local generará los certificados y en el caso de qa generará los archivos de configuración de apache.
+Este creará el .env del entorno que se haya escogido, ademas generará los certificados.
 
 Posteriormente instalaremos desde dentro del contenedor las dependencias de composer.
 
