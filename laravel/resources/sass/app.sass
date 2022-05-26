@@ -1,0 +1,41 @@
+@import "~element-plus/dist/index.css"
+@import "~element-plus/theme-chalk/dark/css-vars.css"
+@import "~element-plus/theme-chalk/src/index"
+
+body
+    font-family: sans-serif
+    margin: 0
+    width: 100vw
+    height: 100%
+    min-height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+
+.centered-layout
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 20px
+    width: 100%
+    height: 100%
+
+.el-container
+    max-width: 1200px
+    width: 100%
+
+$i: 1
+@while($i < 5)
+    .mt-#{$i}
+        margin-top: calc(10px * #{$i})
+
+    .ml-#{$i}
+        margin-left: calc(10px * #{$i})
+
+    .mr-#{$i}
+        margin-right: calc(10px * #{$i})
+
+    .mb-#{$i}
+        margin-bottom: calc(10px * #{$i})
+
+    $i: $i + 1
