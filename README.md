@@ -47,7 +47,15 @@ Por último en nuestro archivo hosts, añadiremos el registro del dominio que ha
 127.0.0.1      dev-mars-rover-mission.com
 ```
 
-Una vez tengamos los contenedores funcionando desde dentro del contenedor, deberás instalar los vendors mediatne **composer install**. Una vez instalados ejecutaremos: 
+Una vez tengamos los contenedores funcionando, crearemos la base de datos de mars_rover_mission.
+
+```bash
+docker exec -it mars-mysql-8.0 mysql -u{root_user} -p{mysql_password}
+create database mars_rover_mission
+```
+
+Una vez creada la base de datos, desde dentro del contenedor de apache, deberás instalar los vendors mediatne **composer install**. Una vez instalados ejecutaremos:
+
 
 ```bash
 php artisan migrate:fresh
